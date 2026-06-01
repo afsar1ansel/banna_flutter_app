@@ -42,29 +42,6 @@ class AuthProvider extends ChangeNotifier {
     final String trimmedEmail = email.trim();
     final String trimmedPassword = password.trim();
 
-    // 1. Development Bypass (Offline/Mobile Testing)
-    if (trimmedEmail == 'afsar@gmail.com' && trimmedPassword == 'afsar@123') {
-      await Future.delayed(const Duration(milliseconds: 800)); // Simulate delay
-      
-      _token = 'mock-dev-token-afsar-12345';
-      _user = {
-        'id': 'd3b07384-d113-4ec6-a5d9-c0a1b2c3d4e5',
-        'name': 'Afsar Ansel',
-        'email': 'afsar@gmail.com',
-        'role': 'admin',
-        'created_at': DateTime.now().toIso8601String()
-      };
-
-      final SharedPreferences prefs = await SharedPreferences.getInstance();
-      await prefs.setString('access_token', _token!);
-      await prefs.setString('admin_user', jsonEncode(_user));
-
-      _isLoading = false;
-      notifyListeners();
-      return true;
-    }
-
-    // 2. Production API call
     try {
       final response = await _apiClient.post('/admin/auth/login', {
         'email': trimmedEmail,

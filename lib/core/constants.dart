@@ -18,6 +18,12 @@ class AppColors {
   
   static const Color activeAmber = Color(0xFFD9A441);
   static const Color errorRed = Color(0xFFEF4444);
+  
+  // Custom dashboard colors from screenshots
+  static const Color cardPeach = Color(0xFFFFF6F0);
+  static const Color cardLightBlue = Color(0xFFEBF3FC);
+  static const Color orangeButton = Color(0xFFEE7423);
+  static const Color cardPurple = Color(0xFF7D58EC);
 }
 
 class AppConstants {
