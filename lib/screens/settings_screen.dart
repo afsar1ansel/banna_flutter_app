@@ -540,7 +540,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 Container(
                   width: double.infinity,
                   color: AppColors.forestGreen,
-                  padding: const EdgeInsets.only(left: 16, right: 16, top: 12, bottom: 60),
+                  padding: const EdgeInsets.only(left: 16, right: 16, top: 12, bottom: 70),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -566,7 +566,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
                 // Overlapping credits card
                 Positioned(
-                  bottom: -28,
+                  bottom: -38,
                   left: 16,
                   right: 16,
                   child: Container(
@@ -616,7 +616,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: 40), // Spacing below overlap card
+            const SizedBox(height: 50), // Spacing below overlap card
 
             // Add Credits and View History buttons
             Padding(
