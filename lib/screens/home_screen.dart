@@ -347,7 +347,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   'Banna Aerosol',
                   style: GoogleFonts.outfit(
-                    fontSize: 16,
+                    fontSize: 14,
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
@@ -365,7 +365,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   'Total sales',
                   style: GoogleFonts.outfit(
-                    fontSize: 12,
+                    fontSize: 10,
                     fontWeight: FontWeight.w500,
                     color: Colors.white.withOpacity(0.7),
                   ),
@@ -388,7 +388,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     : Text(
                         _formatCurrency(_totalSales),
                         style: GoogleFonts.outfit(
-                          fontSize: 32,
+                          fontSize: 30,
                           fontWeight: FontWeight.w800,
                           color: Colors.white,
                           letterSpacing: -0.5,
@@ -400,7 +400,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     : Text(
                         '$_totalOrders orders',
                         style: GoogleFonts.outfit(
-                          fontSize: 11,
+                          fontSize: 9,
                           fontWeight: FontWeight.w600,
                           color: Colors.white.withOpacity(0.8),
                         ),
@@ -460,7 +460,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Text(
                       _formatCurrency(_peakSalesVal),
                       style: GoogleFonts.outfit(
-                        fontSize: 11,
+                        fontSize: 9,
                         fontWeight: FontWeight.bold,
                         color: Colors.white.withOpacity(0.85),
                       ),
@@ -474,7 +474,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: Text(
                     '₹0',
                     style: GoogleFonts.outfit(
-                      fontSize: 10,
+                      fontSize: 8,
                       fontWeight: FontWeight.bold,
                       color: Colors.white.withOpacity(0.6),
                     ),
@@ -524,7 +524,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     child: Text(
                       range,
                       style: GoogleFonts.outfit(
-                        fontSize: 12,
+                        fontSize: 10,
                         fontWeight: FontWeight.bold,
                         color: isActive ? AppColors.forestGreen : Colors.white.withOpacity(0.7),
                       ),
@@ -572,7 +572,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       'Manual payouts for dukaan pay',
                       style: GoogleFonts.outfit(
-                        fontSize: 14,
+                        fontSize: 12,
                         fontWeight: FontWeight.bold,
                         color: AppColors.foreground,
                       ),
@@ -581,7 +581,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     Text(
                       'Your first three payments received via dukaan pay will be settled manually within 7 days by Dukaan.',
                       style: GoogleFonts.outfit(
-                        fontSize: 11,
+                        fontSize: 9,
                         color: AppColors.muted,
                         fontWeight: FontWeight.w500,
                         height: 1.3,
@@ -608,7 +608,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             child: Text(
               'Dismiss',
-              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 13),
+              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11),
             ),
           ),
         ],
@@ -682,7 +682,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Text(
                   title,
                   style: GoogleFonts.outfit(
-                    fontSize: 13,
+                    fontSize: 11,
                     fontWeight: FontWeight.bold,
                     color: AppColors.foreground,
                   ),
@@ -692,7 +692,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   Text(
                     subtitle,
                     style: GoogleFonts.outfit(
-                      fontSize: 10,
+                      fontSize: 8,
                       fontWeight: FontWeight.w500,
                       color: AppColors.muted,
                     ),
@@ -730,7 +730,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Text(
             'Grow & Manage store',
             style: GoogleFonts.outfit(
-              fontSize: 15,
+              fontSize: 13,
               fontWeight: FontWeight.w800,
               color: AppColors.foreground,
               letterSpacing: -0.3,
@@ -740,7 +740,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Text(
             'Effortlessly grow and manage your store',
             style: GoogleFonts.outfit(
-              fontSize: 11,
+              fontSize: 9,
               fontWeight: FontWeight.w500,
               color: AppColors.muted,
             ),
@@ -788,7 +788,7 @@ class _HomeScreenState extends State<HomeScreen> {
             item['name'],
             textAlign: TextAlign.center,
             style: GoogleFonts.outfit(
-              fontSize: 11,
+              fontSize: 9,
               fontWeight: FontWeight.bold,
               color: AppColors.foreground,
             ),
@@ -813,7 +813,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Text(
             'Store',
             style: GoogleFonts.outfit(
-              fontSize: 14,
+              fontSize: 12,
               fontWeight: FontWeight.w800,
               color: AppColors.foreground,
             ),
@@ -822,7 +822,7 @@ class _HomeScreenState extends State<HomeScreen> {
           Text(
             'Congrats 🥳 on making it this far! Share your store with your customers.',
             style: GoogleFonts.outfit(
-              fontSize: 11,
+              fontSize: 9,
               fontWeight: FontWeight.w500,
               color: AppColors.muted,
               height: 1.3,
@@ -847,7 +847,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 'bannasprays.com',
                 textAlign: TextAlign.center,
                 style: GoogleFonts.outfit(
-                  fontSize: 13,
+                  fontSize: 11,
                   fontWeight: FontWeight.bold,
                   color: const Color(0xFF146EB4),
                 ),
@@ -872,7 +872,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(width: 8),
                 Text(
                   'Share link',
-                  style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 13),
+                  style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11),
                 ),
               ],
             ),
@@ -925,7 +925,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         l['title'],
                         style: GoogleFonts.outfit(
-                          fontSize: 13,
+                          fontSize: 11,
                           fontWeight: FontWeight.bold,
                           color: AppColors.foreground,
                         ),
@@ -934,7 +934,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       Text(
                         l['sub'],
                         style: GoogleFonts.outfit(
-                          fontSize: 10,
+                          fontSize: 8,
                           fontWeight: FontWeight.w500,
                           color: AppColors.muted,
                         ),

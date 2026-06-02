@@ -5,6 +5,7 @@ import 'package:lucide_icons/lucide_icons.dart';
 import '../core/constants.dart';
 import '../core/api_client.dart';
 import 'edit_product_screen.dart';
+import 'edit_category_screen.dart';
 
 class ProductsScreen extends StatefulWidget {
   const ProductsScreen({super.key});
@@ -191,7 +192,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
       SnackBar(
         content: Text(
           msg,
-          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: Colors.white),
+          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: Colors.white),
         ),
         backgroundColor: AppColors.forestGreen,
         duration: const Duration(seconds: 2),
@@ -396,7 +397,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
           'Products',
           style: GoogleFonts.outfit(
             fontWeight: FontWeight.bold,
-            fontSize: 18,
+            fontSize: 16,
             color: Colors.white,
           ),
         ),
@@ -418,8 +419,8 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
           indicatorWeight: 3,
           labelColor: Colors.white,
           unselectedLabelColor: Colors.white.withOpacity(0.7),
-          labelStyle: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 13),
-          unselectedLabelStyle: GoogleFonts.outfit(fontWeight: FontWeight.w600, fontSize: 13),
+          labelStyle: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11),
+          unselectedLabelStyle: GoogleFonts.outfit(fontWeight: FontWeight.w600, fontSize: 11),
           tabs: const [
             Tab(text: 'All Products'),
             Tab(text: 'Categories'),
@@ -503,7 +504,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.outfit(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 14,
+                                        fontSize: 12,
                                         color: AppColors.foreground,
                                       ),
                                     ),
@@ -516,7 +517,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                           '₹${price.round()}',
                                           style: GoogleFonts.outfit(
                                             fontWeight: FontWeight.w800,
-                                            fontSize: 13,
+                                            fontSize: 11,
                                             color: AppColors.foreground,
                                           ),
                                         ),
@@ -526,7 +527,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                             '₹${compPrice.round()}',
                                             style: GoogleFonts.outfit(
                                               fontWeight: FontWeight.w500,
-                                              fontSize: 11,
+                                              fontSize: 9,
                                               color: AppColors.muted,
                                               decoration: TextDecoration.lineThrough,
                                             ),
@@ -543,7 +544,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                           '${p['inventory'] ?? 1} piece',
                                           style: GoogleFonts.outfit(
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 11,
+                                            fontSize: 9,
                                             color: AppColors.muted,
                                           ),
                                         ),
@@ -561,7 +562,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                           active ? 'Active' : 'Inactive',
                                           style: GoogleFonts.outfit(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 11,
+                                            fontSize: 9,
                                             color: active ? const Color(0xFF3FAE5A) : AppColors.muted,
                                           ),
                                         ),
@@ -637,119 +638,133 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                       final bool active = c['status'] ?? false;
                       final int count = c['product_count'] ?? 0;
 
-                      return Container(
-                        padding: const EdgeInsets.all(12),
-                        decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(12),
-                          border: Border.all(color: AppColors.border),
-                          boxShadow: [
-                            BoxShadow(
-                              color: Colors.black.withOpacity(0.015),
-                              blurRadius: 10,
-                              offset: const Offset(0, 4),
+                      return GestureDetector(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => EditCategoryScreen(category: c),
                             ),
-                          ],
-                        ),
-                        child: Row(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            // 1. Category vector logo
-                            c['image_url'] != null
-                                ? ClipRRect(
-                                    borderRadius: BorderRadius.circular(10),
-                                    child: Image.network(
-                                      c['image_url'],
-                                      width: 60,
-                                      height: 60,
-                                      fit: BoxFit.cover,
-                                      errorBuilder: (context, error, stackTrace) => _buildProductVectorImage(c['name'] ?? '', isCategory: true),
-                                    ),
-                                  )
-                                : _buildProductVectorImage(c['name'] ?? '', isCategory: true),
-                            const SizedBox(width: 12),
+                          ).then((updated) {
+                            if (updated == true) {
+                              _fetchCategories();
+                            }
+                          });
+                        },
+                        child: Container(
+                          padding: const EdgeInsets.all(12),
+                          decoration: BoxDecoration(
+                            color: Colors.white,
+                            borderRadius: BorderRadius.circular(12),
+                            border: Border.all(color: AppColors.border),
+                            boxShadow: [
+                              BoxShadow(
+                                color: Colors.black.withOpacity(0.015),
+                                blurRadius: 10,
+                                offset: const Offset(0, 4),
+                              ),
+                            ],
+                          ),
+                          child: Row(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              // 1. Category vector logo
+                              c['image_url'] != null
+                                  ? ClipRRect(
+                                      borderRadius: BorderRadius.circular(10),
+                                      child: Image.network(
+                                        c['image_url'],
+                                        width: 60,
+                                        height: 60,
+                                        fit: BoxFit.cover,
+                                        errorBuilder: (context, error, stackTrace) => _buildProductVectorImage(c['name'] ?? '', isCategory: true),
+                                      ),
+                                    )
+                                  : _buildProductVectorImage(c['name'] ?? '', isCategory: true),
+                              const SizedBox(width: 12),
 
-                            // 2. Info elements
-                            Expanded(
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
+                              // 2. Info elements
+                              Expanded(
+                                child: Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Text(
+                                      c['name'] ?? 'Series Sprays',
+                                      maxLines: 1,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: GoogleFonts.outfit(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 12,
+                                        color: AppColors.foreground,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 4),
+                                    Text(
+                                      '$count products listed',
+                                      style: GoogleFonts.outfit(
+                                        fontWeight: FontWeight.w500,
+                                        fontSize: 9,
+                                        color: AppColors.muted,
+                                      ),
+                                    ),
+                                    const SizedBox(height: 8),
+                                    Text(
+                                      active ? 'Active' : 'Inactive',
+                                      style: GoogleFonts.outfit(
+                                        fontWeight: FontWeight.bold,
+                                        fontSize: 9,
+                                        color: active ? const Color(0xFF3FAE5A) : AppColors.muted,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+
+                              // 3. Actions & Toggle Switches
+                              Column(
+                                crossAxisAlignment: CrossAxisAlignment.end,
                                 children: [
-                                  Text(
-                                    c['name'] ?? 'Series Sprays',
-                                    maxLines: 1,
-                                    overflow: TextOverflow.ellipsis,
-                                    style: GoogleFonts.outfit(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 14,
-                                      color: AppColors.foreground,
-                                    ),
+                                  Row(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      IconButton(
+                                        padding: EdgeInsets.zero,
+                                        constraints: const BoxConstraints(),
+                                        icon: const Icon(LucideIcons.share2, color: AppColors.muted, size: 16),
+                                        onPressed: () => _showToast('Share category link!'),
+                                      ),
+                                      const SizedBox(width: 10),
+                                      IconButton(
+                                        padding: EdgeInsets.zero,
+                                        constraints: const BoxConstraints(),
+                                        icon: const Icon(LucideIcons.moreVertical, color: AppColors.muted, size: 16),
+                                        onPressed: () => _showToast('More options...'),
+                                      ),
+                                    ],
                                   ),
-                                  const SizedBox(height: 4),
-                                  Text(
-                                    '$count products listed',
-                                    style: GoogleFonts.outfit(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: 11,
-                                      color: AppColors.muted,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 8),
-                                  Text(
-                                    active ? 'Active' : 'Inactive',
-                                    style: GoogleFonts.outfit(
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 11,
-                                      color: active ? const Color(0xFF3FAE5A) : AppColors.muted,
+                                  const SizedBox(height: 12),
+                                  SizedBox(
+                                    height: 24,
+                                    width: 40,
+                                    child: Transform.scale(
+                                      scale: 0.75,
+                                      child: Switch(
+                                        value: active,
+                                        activeColor: Colors.white,
+                                        activeTrackColor: const Color(0xFF146EB4),
+                                        inactiveThumbColor: Colors.white,
+                                        inactiveTrackColor: const Color(0xFFD6D6D6),
+                                        trackOutlineColor: WidgetStateProperty.all(Colors.transparent),
+                                        onChanged: (val) {
+                                          _toggleCategoryStatus(c['id'] ?? '', active, index);
+                                        },
+                                      ),
                                     ),
                                   ),
                                 ],
                               ),
-                            ),
-
-                            // 3. Actions & Toggle Switches
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.end,
-                              children: [
-                                Row(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    IconButton(
-                                      padding: EdgeInsets.zero,
-                                      constraints: const BoxConstraints(),
-                                      icon: const Icon(LucideIcons.share2, color: AppColors.muted, size: 16),
-                                      onPressed: () => _showToast('Share category link!'),
-                                    ),
-                                    const SizedBox(width: 10),
-                                    IconButton(
-                                      padding: EdgeInsets.zero,
-                                      constraints: const BoxConstraints(),
-                                      icon: const Icon(LucideIcons.moreVertical, color: AppColors.muted, size: 16),
-                                      onPressed: () => _showToast('More options...'),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: 12),
-                                SizedBox(
-                                  height: 24,
-                                  width: 40,
-                                  child: Transform.scale(
-                                    scale: 0.75,
-                                    child: Switch(
-                                      value: active,
-                                      activeColor: Colors.white,
-                                      activeTrackColor: const Color(0xFF146EB4),
-                                      inactiveThumbColor: Colors.white,
-                                      inactiveTrackColor: const Color(0xFFD6D6D6),
-                                      trackOutlineColor: WidgetStateProperty.all(Colors.transparent),
-                                      onChanged: (val) {
-                                        _toggleCategoryStatus(c['id'] ?? '', active, index);
-                                      },
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       );
                     },
@@ -780,7 +795,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                 _tabController.index == 0 ? 'Add product' : 'Create category',
                 style: GoogleFonts.outfit(
                   fontWeight: FontWeight.bold,
-                  fontSize: 13,
+                  fontSize: 11,
                   color: Colors.white,
                 ),
               ),

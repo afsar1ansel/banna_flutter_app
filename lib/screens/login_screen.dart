@@ -185,7 +185,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                         'Welcome Back',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.outfit(
-                          fontSize: 28,
+                          fontSize: 26,
                           fontWeight: FontWeight.w800,
                           color: AppColors.foreground,
                           letterSpacing: -0.5,
@@ -196,7 +196,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                         'Enter your credentials to securely access the Banna management dashboard.',
                         textAlign: TextAlign.center,
                         style: GoogleFonts.outfit(
-                          fontSize: 13,
+                          fontSize: 11,
                           fontWeight: FontWeight.w500,
                           color: AppColors.muted,
                           height: 1.4,
@@ -226,7 +226,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                             Text(
                               'ADMIN EMAIL',
                               style: GoogleFonts.outfit(
-                                fontSize: 10,
+                                fontSize: 8,
                                 fontWeight: FontWeight.bold,
                                 color: AppColors.foreground,
                                 letterSpacing: 1.0,
@@ -236,7 +236,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                             TextFormField(
                               controller: _emailController,
                               keyboardType: TextInputType.emailAddress,
-                              style: GoogleFonts.outfit(fontSize: 14, color: AppColors.foreground, fontWeight: FontWeight.w600),
+                              style: GoogleFonts.outfit(fontSize: 12, color: AppColors.foreground, fontWeight: FontWeight.w600),
                               decoration: InputDecoration(
                                 hintText: 'admin@banna.com',
                                 hintStyle: GoogleFonts.outfit(color: AppColors.muted.withOpacity(0.5)),
@@ -274,7 +274,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                 Text(
                                   'PASSWORD',
                                   style: GoogleFonts.outfit(
-                                    fontSize: 10,
+                                    fontSize: 8,
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.foreground,
                                     letterSpacing: 1.0,
@@ -283,7 +283,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                 Text(
                                   'Forgot?',
                                   style: GoogleFonts.outfit(
-                                    fontSize: 11,
+                                    fontSize: 9,
                                     fontWeight: FontWeight.bold,
                                     color: AppColors.primary,
                                   ),
@@ -294,7 +294,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                             TextFormField(
                               controller: _passwordController,
                               obscureText: !_showPassword,
-                              style: GoogleFonts.outfit(fontSize: 14, color: AppColors.foreground, fontWeight: FontWeight.w600),
+                              style: GoogleFonts.outfit(fontSize: 12, color: AppColors.foreground, fontWeight: FontWeight.w600),
                               decoration: InputDecoration(
                                 hintText: '••••••••',
                                 hintStyle: GoogleFonts.outfit(color: AppColors.muted.withOpacity(0.5)),
@@ -362,7 +362,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                                         Text(
                                           'SIGN IN TO DASHBOARD',
                                           style: GoogleFonts.outfit(
-                                            fontSize: 12,
+                                            fontSize: 10,
                                             fontWeight: FontWeight.bold,
                                             letterSpacing: 0.8,
                                           ),
@@ -386,7 +386,7 @@ class _LoginScreenState extends State<LoginScreen> with SingleTickerProviderStat
                           Text(
                             'Protected by Enterprise Shield. System audits are recorded.',
                             style: GoogleFonts.outfit(
-                              fontSize: 10,
+                              fontSize: 8,
                               fontWeight: FontWeight.w500,
                               color: AppColors.muted,
                             ),
