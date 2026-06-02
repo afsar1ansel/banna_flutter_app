@@ -192,7 +192,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
       SnackBar(
         content: Text(
           msg,
-          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: Colors.white),
+          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: Colors.white),
         ),
         backgroundColor: AppColors.forestGreen,
         duration: const Duration(seconds: 2),
@@ -397,7 +397,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
           'Products',
           style: GoogleFonts.outfit(
             fontWeight: FontWeight.bold,
-            fontSize: 16,
+            fontSize: 15,
             color: Colors.white,
           ),
         ),
@@ -419,8 +419,8 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
           indicatorWeight: 3,
           labelColor: Colors.white,
           unselectedLabelColor: Colors.white.withOpacity(0.7),
-          labelStyle: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11),
-          unselectedLabelStyle: GoogleFonts.outfit(fontWeight: FontWeight.w600, fontSize: 11),
+          labelStyle: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10),
+          unselectedLabelStyle: GoogleFonts.outfit(fontWeight: FontWeight.w600, fontSize: 10),
           tabs: const [
             Tab(text: 'All Products'),
             Tab(text: 'Categories'),
@@ -504,7 +504,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.outfit(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 12,
+                                        fontSize: 11,
                                         color: AppColors.foreground,
                                       ),
                                     ),
@@ -517,7 +517,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                           '₹${price.round()}',
                                           style: GoogleFonts.outfit(
                                             fontWeight: FontWeight.w800,
-                                            fontSize: 11,
+                                            fontSize: 10,
                                             color: AppColors.foreground,
                                           ),
                                         ),
@@ -527,7 +527,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                             '₹${compPrice.round()}',
                                             style: GoogleFonts.outfit(
                                               fontWeight: FontWeight.w500,
-                                              fontSize: 9,
+                                              fontSize: 8,
                                               color: AppColors.muted,
                                               decoration: TextDecoration.lineThrough,
                                             ),
@@ -544,7 +544,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                           '${p['inventory'] ?? 1} piece',
                                           style: GoogleFonts.outfit(
                                             fontWeight: FontWeight.w600,
-                                            fontSize: 9,
+                                            fontSize: 8,
                                             color: AppColors.muted,
                                           ),
                                         ),
@@ -562,7 +562,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                           active ? 'Active' : 'Inactive',
                                           style: GoogleFonts.outfit(
                                             fontWeight: FontWeight.bold,
-                                            fontSize: 9,
+                                            fontSize: 8,
                                             color: active ? const Color(0xFF3FAE5A) : AppColors.muted,
                                           ),
                                         ),
@@ -694,7 +694,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                       overflow: TextOverflow.ellipsis,
                                       style: GoogleFonts.outfit(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 12,
+                                        fontSize: 11,
                                         color: AppColors.foreground,
                                       ),
                                     ),
@@ -703,7 +703,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                       '$count products listed',
                                       style: GoogleFonts.outfit(
                                         fontWeight: FontWeight.w500,
-                                        fontSize: 9,
+                                        fontSize: 8,
                                         color: AppColors.muted,
                                       ),
                                     ),
@@ -712,7 +712,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                                       active ? 'Active' : 'Inactive',
                                       style: GoogleFonts.outfit(
                                         fontWeight: FontWeight.bold,
-                                        fontSize: 9,
+                                        fontSize: 8,
                                         color: active ? const Color(0xFF3FAE5A) : AppColors.muted,
                                       ),
                                     ),
@@ -795,7 +795,7 @@ class _ProductsScreenState extends State<ProductsScreen> with SingleTickerProvid
                 _tabController.index == 0 ? 'Add product' : 'Create category',
                 style: GoogleFonts.outfit(
                   fontWeight: FontWeight.bold,
-                  fontSize: 11,
+                  fontSize: 10,
                   color: Colors.white,
                 ),
               ),

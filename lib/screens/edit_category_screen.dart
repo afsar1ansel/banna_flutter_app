@@ -68,7 +68,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
             Expanded(
               child: Text(
                 msg,
-                style: GoogleFonts.outfit(fontWeight: FontWeight.w600, fontSize: 10),
+                style: GoogleFonts.outfit(fontWeight: FontWeight.w600, fontSize: 9),
               ),
             ),
           ],
@@ -352,7 +352,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                         children: [
                           Text(
                             'Select products',
-                            style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 14),
+                            style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 13),
                           ),
                           IconButton(
                             icon: const Icon(LucideIcons.x, size: 20),
@@ -368,7 +368,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                       padding: const EdgeInsets.all(12),
                       child: TextField(
                         onChanged: (val) => setModalState(() => searchQuery = val),
-                        style: GoogleFonts.outfit(fontSize: 11),
+                        style: GoogleFonts.outfit(fontSize: 10),
                         decoration: InputDecoration(
                           hintText: 'Search products by name or SKU...',
                           prefixIcon: const Icon(LucideIcons.search, size: 16),
@@ -386,7 +386,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                               ? Center(
                                   child: Text(
                                     'No products found.',
-                                    style: GoogleFonts.outfit(color: AppColors.muted, fontSize: 11),
+                                    style: GoogleFonts.outfit(color: AppColors.muted, fontSize: 10),
                                   ),
                                 )
                               : ListView.separated(
@@ -432,11 +432,11 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                                       ),
                                       title: Text(
                                         p['name'] ?? 'Product Item',
-                                        style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11),
+                                        style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10),
                                       ),
                                       subtitle: Text(
                                         'SKU: ${p['sku'] ?? 'N/A'} • \$${(p['price'] ?? 0).toString()}',
-                                        style: GoogleFonts.outfit(fontSize: 9, color: AppColors.muted),
+                                        style: GoogleFonts.outfit(fontSize: 8, color: AppColors.muted),
                                       ),
                                       trailing: Icon(
                                         isChecked ? LucideIcons.checkSquare : LucideIcons.square,
@@ -458,7 +458,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                         children: [
                           Text(
                             '${selectedIds.length} products selected',
-                            style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10),
+                            style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9),
                           ),
                           ElevatedButton(
                             style: ElevatedButton.styleFrom(
@@ -471,7 +471,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                               Navigator.pop(context);
                               _syncProductSelections(selectedIds);
                             },
-                            child: Text('Save selection', style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10)),
+                            child: Text('Save selection', style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9)),
                           ),
                         ],
                       ),
@@ -584,7 +584,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                           title,
                           style: GoogleFonts.outfit(
                             fontWeight: FontWeight.bold,
-                            fontSize: 13,
+                            fontSize: 12,
                             color: AppColors.foreground,
                           ),
                         ),
@@ -592,7 +592,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                         Text(
                           subtitle,
                           style: GoogleFonts.outfit(
-                            fontSize: 9,
+                            fontSize: 8,
                             color: AppColors.muted,
                           ),
                         ),
@@ -629,7 +629,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
         elevation: 0.5,
         title: Text(
           'Edit Category',
-          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 14, color: AppColors.foreground),
+          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 13, color: AppColors.foreground),
         ),
         leading: IconButton(
           icon: const Icon(LucideIcons.arrowLeft, color: AppColors.foreground),
@@ -648,7 +648,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
               onPressed: _isSaving ? null : _handleSave,
               child: _isSaving
                   ? const SizedBox(width: 14, height: 14, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                  : Text('Save', style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10)),
+                  : Text('Save', style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9)),
             ),
           ),
         ],
@@ -694,7 +694,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                             children: [
                               Text(
                                 'Category Thumbnail Icon',
-                                style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11),
+                                style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10),
                               ),
                               const SizedBox(height: 4),
                               ElevatedButton(
@@ -712,7 +712,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                                   });
                                   _showToast('Mock thumbnail uploaded!');
                                 },
-                                child: Text('Mock Upload', style: GoogleFonts.outfit(fontSize: 9)),
+                                child: Text('Mock Upload', style: GoogleFonts.outfit(fontSize: 8)),
                               ),
                             ],
                           ),
@@ -724,12 +724,12 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                     // Name
                     Text(
                       'Category Name *',
-                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: AppColors.muted),
+                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: AppColors.muted),
                     ),
                     const SizedBox(height: 4),
                     TextFormField(
                       controller: _nameController,
-                      style: GoogleFonts.outfit(fontSize: 11),
+                      style: GoogleFonts.outfit(fontSize: 10),
                       decoration: const InputDecoration(hintText: 'Enter category name (e.g. Primers)'),
                       validator: (val) => val == null || val.trim().isEmpty ? 'Name is required' : null,
                     ),
@@ -744,12 +744,12 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                             children: [
                               Text(
                                 'Sort Order',
-                                style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: AppColors.muted),
+                                style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: AppColors.muted),
                               ),
                               const SizedBox(height: 4),
                               TextFormField(
                                 controller: _sortOrderController,
-                                style: GoogleFonts.outfit(fontSize: 11),
+                                style: GoogleFonts.outfit(fontSize: 10),
                                 keyboardType: TextInputType.number,
                                 decoration: const InputDecoration(hintText: '1'),
                               ),
@@ -762,7 +762,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                           children: [
                             Text(
                               'Active Status',
-                              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: AppColors.muted),
+                              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: AppColors.muted),
                             ),
                             const SizedBox(height: 4),
                             Switch(
@@ -783,7 +783,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                       contentPadding: EdgeInsets.zero,
                       title: Text(
                         'Add as subcategory',
-                        style: GoogleFonts.outfit(fontSize: 11, fontWeight: FontWeight.bold),
+                        style: GoogleFonts.outfit(fontSize: 10, fontWeight: FontWeight.bold),
                       ),
                       onChanged: (val) => setState(() => _isSubcategory = val ?? false),
                     ),
@@ -792,12 +792,12 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                       const SizedBox(height: 8),
                       Text(
                         'Select Parent Category *',
-                        style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: AppColors.muted),
+                        style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: AppColors.muted),
                       ),
                       const SizedBox(height: 4),
                       DropdownButtonFormField<String>(
                         value: _parentId,
-                        style: GoogleFonts.outfit(fontSize: 11, color: AppColors.foreground),
+                        style: GoogleFonts.outfit(fontSize: 10, color: AppColors.foreground),
                         decoration: const InputDecoration(contentPadding: EdgeInsets.symmetric(horizontal: 12, vertical: 8)),
                         items: [
                           const DropdownMenuItem<String>(
@@ -832,14 +832,14 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                     Row(
                       children: [
                         ChoiceChip(
-                          label: Text('Desktop Banner', style: GoogleFonts.outfit(fontSize: 9)),
+                          label: Text('Desktop Banner', style: GoogleFonts.outfit(fontSize: 8)),
                           selected: _bannerTab == 'desktop',
                           selectedColor: AppColors.forestGreen.withOpacity(0.12),
                           onSelected: (val) => setState(() => _bannerTab = 'desktop'),
                         ),
                         const SizedBox(width: 8),
                         ChoiceChip(
-                          label: Text('Mobile Banner', style: GoogleFonts.outfit(fontSize: 9)),
+                          label: Text('Mobile Banner', style: GoogleFonts.outfit(fontSize: 8)),
                           selected: _bannerTab == 'mobile',
                           selectedColor: AppColors.forestGreen.withOpacity(0.12),
                           onSelected: (val) => setState(() => _bannerTab = 'mobile'),
@@ -851,23 +851,23 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                     if (_bannerTab == 'desktop') ...[
                       Text(
                         'Desktop Banner URL',
-                        style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: AppColors.muted),
+                        style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: AppColors.muted),
                       ),
                       const SizedBox(height: 4),
                       TextFormField(
                         controller: _bannerUrlDesktopController,
-                        style: GoogleFonts.outfit(fontSize: 11),
+                        style: GoogleFonts.outfit(fontSize: 10),
                         decoration: const InputDecoration(hintText: 'https://bannasprays.com/...'),
                       ),
                     ] else ...[
                       Text(
                         'Mobile Banner URL',
-                        style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: AppColors.muted),
+                        style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: AppColors.muted),
                       ),
                       const SizedBox(height: 4),
                       TextFormField(
                         controller: _bannerUrlMobileController,
-                        style: GoogleFonts.outfit(fontSize: 11),
+                        style: GoogleFonts.outfit(fontSize: 10),
                         decoration: const InputDecoration(hintText: 'https://bannasprays.com/...'),
                       ),
                     ],
@@ -881,7 +881,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                       ),
                       icon: const Icon(LucideIcons.uploadCloud, size: 14),
-                      label: Text('Attach Mock Banner Photo', style: GoogleFonts.outfit(fontSize: 9)),
+                      label: Text('Attach Mock Banner Photo', style: GoogleFonts.outfit(fontSize: 8)),
                       onPressed: () {
                         setState(() {
                           if (_bannerTab == 'desktop') {
@@ -909,12 +909,12 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                   children: [
                     Text(
                       'Category Description',
-                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: AppColors.muted),
+                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: AppColors.muted),
                     ),
                     const SizedBox(height: 6),
                     TextFormField(
                       controller: _descriptionController,
-                      style: GoogleFonts.outfit(fontSize: 11),
+                      style: GoogleFonts.outfit(fontSize: 10),
                       maxLines: 5,
                       decoration: const InputDecoration(
                         hintText: 'Describe details regarding coverage metrics or series sprays listed in this category...',
@@ -948,7 +948,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                         child: Center(
                           child: Text(
                             'No subcategories mapped yet.',
-                            style: GoogleFonts.outfit(fontSize: 10, color: AppColors.muted, fontStyle: FontStyle.italic),
+                            style: GoogleFonts.outfit(fontSize: 9, color: AppColors.muted, fontStyle: FontStyle.italic),
                           ),
                         ),
                       )
@@ -980,11 +980,11 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                               ),
                               title: Text(
                                 sub['name'] ?? 'Child Category',
-                                style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11),
+                                style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10),
                               ),
                               subtitle: Text(
                                 '/${sub['slug'] ?? ''}',
-                                style: GoogleFonts.outfit(fontSize: 9, color: AppColors.muted),
+                                style: GoogleFonts.outfit(fontSize: 8, color: AppColors.muted),
                               ),
                               trailing: PopupMenuButton<String>(
                                 icon: const Icon(LucideIcons.moreVertical, size: 18, color: AppColors.muted),
@@ -992,15 +992,15 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                                 itemBuilder: (context) => [
                                   PopupMenuItem(
                                     value: 'edit',
-                                    child: Text('Edit Subcategory', style: GoogleFonts.outfit(fontSize: 10)),
+                                    child: Text('Edit Subcategory', style: GoogleFonts.outfit(fontSize: 9)),
                                   ),
                                   PopupMenuItem(
                                     value: 'unlink',
-                                    child: Text('Unlink Subcategory', style: GoogleFonts.outfit(fontSize: 10)),
+                                    child: Text('Unlink Subcategory', style: GoogleFonts.outfit(fontSize: 9)),
                                   ),
                                   PopupMenuItem(
                                     value: 'delete',
-                                    child: Text('Delete Permanent', style: GoogleFonts.outfit(fontSize: 10, color: AppColors.errorRed, fontWeight: FontWeight.bold)),
+                                    child: Text('Delete Permanent', style: GoogleFonts.outfit(fontSize: 9, color: AppColors.errorRed, fontWeight: FontWeight.bold)),
                                   ),
                                 ],
                                 onSelected: (val) {
@@ -1026,7 +1026,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                     Center(
                       child: TextButton.icon(
                         icon: const Icon(LucideIcons.plus, size: 14),
-                        label: Text('Add subcategory', style: GoogleFonts.outfit(fontSize: 10, fontWeight: FontWeight.bold)),
+                        label: Text('Add subcategory', style: GoogleFonts.outfit(fontSize: 9, fontWeight: FontWeight.bold)),
                         style: TextButton.styleFrom(
                           foregroundColor: const Color(0xFF146EB4),
                           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -1075,7 +1075,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                         child: Center(
                           child: Text(
                             'No products associated yet.',
-                            style: GoogleFonts.outfit(fontSize: 10, color: AppColors.muted, fontStyle: FontStyle.italic),
+                            style: GoogleFonts.outfit(fontSize: 9, color: AppColors.muted, fontStyle: FontStyle.italic),
                           ),
                         ),
                       )
@@ -1107,11 +1107,11 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                               ),
                               title: Text(
                                 p['name'] ?? 'Product Item',
-                                style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11),
+                                style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10),
                               ),
                               subtitle: Text(
                                 '${p['sku'] ?? 'N/A'} • \$${(p['price'] ?? 0).toString()}',
-                                style: GoogleFonts.outfit(fontSize: 9, color: AppColors.muted),
+                                style: GoogleFonts.outfit(fontSize: 8, color: AppColors.muted),
                               ),
                               trailing: IconButton(
                                 icon: const Icon(LucideIcons.xCircle, size: 18, color: AppColors.errorRed),
@@ -1125,7 +1125,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                     Center(
                       child: TextButton.icon(
                         icon: const Icon(LucideIcons.checkSquare, size: 14),
-                        label: Text('Select products', style: GoogleFonts.outfit(fontSize: 10, fontWeight: FontWeight.bold)),
+                        label: Text('Select products', style: GoogleFonts.outfit(fontSize: 9, fontWeight: FontWeight.bold)),
                         style: TextButton.styleFrom(
                           foregroundColor: const Color(0xFF146EB4),
                           padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -1150,12 +1150,12 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                     // SEO Title
                     Text(
                       'Title Tag',
-                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: AppColors.muted),
+                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: AppColors.muted),
                     ),
                     const SizedBox(height: 4),
                     TextFormField(
                       controller: _seoTitleController,
-                      style: GoogleFonts.outfit(fontSize: 11),
+                      style: GoogleFonts.outfit(fontSize: 10),
                       decoration: const InputDecoration(hintText: 'Enter title tag'),
                       onChanged: (val) => setState(() {}),
                     ),
@@ -1173,7 +1173,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                       },
                       child: Text(
                         'Generate Title Suggestion',
-                        style: GoogleFonts.outfit(color: const Color(0xFF146EB4), fontWeight: FontWeight.bold, fontSize: 9),
+                        style: GoogleFonts.outfit(color: const Color(0xFF146EB4), fontWeight: FontWeight.bold, fontSize: 8),
                       ),
                     ),
                     const SizedBox(height: 14),
@@ -1181,12 +1181,12 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                     // SEO Description
                     Text(
                       'Meta Description Tag',
-                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: AppColors.muted),
+                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: AppColors.muted),
                     ),
                     const SizedBox(height: 4),
                     TextFormField(
                       controller: _seoMetaDescriptionController,
-                      style: GoogleFonts.outfit(fontSize: 11),
+                      style: GoogleFonts.outfit(fontSize: 10),
                       maxLines: 3,
                       decoration: const InputDecoration(hintText: 'Enter meta description tag'),
                       onChanged: (val) => setState(() {}),
@@ -1205,7 +1205,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                       },
                       child: Text(
                         'Generate Meta Description Suggestion',
-                        style: GoogleFonts.outfit(color: const Color(0xFF146EB4), fontWeight: FontWeight.bold, fontSize: 9),
+                        style: GoogleFonts.outfit(color: const Color(0xFF146EB4), fontWeight: FontWeight.bold, fontSize: 8),
                       ),
                     ),
                     const SizedBox(height: 14),
@@ -1213,7 +1213,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                     // Realtime Google Preview Snippet
                     Text(
                       'Search sharing snippet preview',
-                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: AppColors.muted),
+                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: AppColors.muted),
                     ),
                     const SizedBox(height: 6),
                     Container(
@@ -1234,7 +1234,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                             overflow: TextOverflow.ellipsis,
                             style: GoogleFonts.outfit(
                               fontWeight: FontWeight.bold,
-                              fontSize: 11,
+                              fontSize: 10,
                               color: const Color(0xFF146EB4),
                             ),
                           ),
@@ -1244,7 +1244,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                             maxLines: 1,
                             overflow: TextOverflow.ellipsis,
                             style: GoogleFonts.outfit(
-                              fontSize: 8,
+                              fontSize: 7,
                               color: const Color(0xFF3FAE5A),
                             ),
                           ),
@@ -1256,7 +1256,7 @@ class _EditCategoryScreenState extends State<EditCategoryScreen> {
                             maxLines: 2,
                             overflow: TextOverflow.ellipsis,
                             style: GoogleFonts.outfit(
-                              fontSize: 8.5,
+                              fontSize: 7.5,
                               color: AppColors.muted,
                             ),
                           ),

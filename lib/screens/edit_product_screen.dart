@@ -466,7 +466,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
       SnackBar(
         content: Text(
           msg,
-          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: Colors.white),
+          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: Colors.white),
         ),
         backgroundColor: AppColors.forestGreen,
         duration: const Duration(seconds: 2),
@@ -528,7 +528,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                           title,
                           style: GoogleFonts.outfit(
                             fontWeight: FontWeight.bold,
-                            fontSize: 14,
+                            fontSize: 13,
                             color: AppColors.foreground,
                           ),
                         ),
@@ -536,7 +536,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                         Text(
                           subtitle,
                           style: GoogleFonts.outfit(
-                            fontSize: 10,
+                            fontSize: 9,
                             color: AppColors.muted,
                             fontWeight: FontWeight.w500,
                           ),
@@ -597,7 +597,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
           'Edit product',
           style: GoogleFonts.outfit(
             fontWeight: FontWeight.bold,
-            fontSize: 18,
+            fontSize: 17,
             color: Colors.white,
           ),
         ),
@@ -628,7 +628,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                             RichText(
                               text: TextSpan(
                                 text: 'Product name ',
-                                style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                                style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                                 children: const [
                                   TextSpan(text: '*', style: TextStyle(color: AppColors.errorRed)),
                                 ],
@@ -636,7 +636,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                             ),
                             Text(
                               '$_charCount/200',
-                              style: GoogleFonts.outfit(fontSize: 10, color: AppColors.muted, fontWeight: FontWeight.bold),
+                              style: GoogleFonts.outfit(fontSize: 9, color: AppColors.muted, fontWeight: FontWeight.bold),
                             ),
                           ],
                         ),
@@ -660,7 +660,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               borderSide: const BorderSide(color: AppColors.forestGreen, width: 1.5),
                             ),
                           ),
-                          style: GoogleFonts.outfit(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.foreground),
+                          style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.foreground),
                           validator: (val) => (val == null || val.trim().isEmpty) ? 'Product name is required' : null,
                         ),
                         const SizedBox(height: 16),
@@ -668,7 +668,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                         RichText(
                           text: TextSpan(
                             text: 'Product categories ',
-                            style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                            style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                             children: const [
                               TextSpan(text: '*', style: TextStyle(color: AppColors.errorRed)),
                             ],
@@ -692,7 +692,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                     c,
                                     style: GoogleFonts.outfit(
                                       color: Colors.white,
-                                      fontSize: 11,
+                                      fontSize: 10,
                                       fontWeight: FontWeight.bold,
                                     ),
                                   ),
@@ -731,7 +731,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                       'Add category',
                                       style: GoogleFonts.outfit(
                                         color: AppColors.foreground,
-                                        fontSize: 11,
+                                        fontSize: 10,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -751,7 +751,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                 children: [
                                   Text(
                                     'Price',
-                                    style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                                    style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                                   ),
                                   const SizedBox(height: 6),
                                   TextFormField(
@@ -776,7 +776,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                         borderSide: const BorderSide(color: AppColors.forestGreen, width: 1.5),
                                       ),
                                     ),
-                                    style: GoogleFonts.outfit(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.foreground),
+                                    style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.foreground),
                                     validator: (val) => (val == null || val.trim().isEmpty) ? 'Base price is required' : null,
                                   ),
                                 ],
@@ -789,7 +789,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                 children: [
                                   Text(
                                     'Discounted price',
-                                    style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                                    style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                                   ),
                                   const SizedBox(height: 6),
                                   TextFormField(
@@ -814,7 +814,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                         borderSide: const BorderSide(color: AppColors.forestGreen, width: 1.5),
                                       ),
                                     ),
-                                    style: GoogleFonts.outfit(fontSize: 13, fontWeight: FontWeight.w800, color: AppColors.foreground),
+                                    style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.w800, color: AppColors.foreground),
                                   ),
                                 ],
                               ),
@@ -836,7 +836,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               child: Text(
                                 '$_discountPercent% OFF',
                                 style: GoogleFonts.outfit(
-                                  fontSize: 10,
+                                  fontSize: 9,
                                   fontWeight: FontWeight.w800,
                                   color: const Color(0xFFEE7423),
                                 ),
@@ -850,18 +850,18 @@ class _EditProductScreenState extends State<EditProductScreen> {
                           children: [
                             Text(
                               'Price: ',
-                              style: GoogleFonts.outfit(fontSize: 10, color: AppColors.muted, fontWeight: FontWeight.bold),
+                              style: GoogleFonts.outfit(fontSize: 9, color: AppColors.muted, fontWeight: FontWeight.bold),
                             ),
                             Text(
                               '₹${_discountedPriceController.text.isNotEmpty ? _discountedPriceController.text : _priceController.text}',
-                              style: GoogleFonts.outfit(fontSize: 10, color: AppColors.muted, fontWeight: FontWeight.bold),
+                              style: GoogleFonts.outfit(fontSize: 9, color: AppColors.muted, fontWeight: FontWeight.bold),
                             ),
                             if (_discountedPriceController.text.isNotEmpty) ...[
                               const SizedBox(width: 4),
                               Text(
                                 '₹${_priceController.text}',
                                 style: GoogleFonts.outfit(
-                                  fontSize: 10, 
+                                  fontSize: 9, 
                                   color: AppColors.muted, 
                                   decoration: TextDecoration.lineThrough,
                                   fontWeight: FontWeight.w500,
@@ -885,7 +885,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                 child: Text(
                                   'Price updated since a size with a lower price is added',
                                   style: GoogleFonts.outfit(
-                                    fontSize: 10,
+                                    fontSize: 9,
                                     fontWeight: FontWeight.bold,
                                     color: const Color(0xFF146EB4),
                                     height: 1.3,
@@ -897,7 +897,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                 child: Text(
                                   'CHANGE',
                                   style: GoogleFonts.outfit(
-                                    fontSize: 10,
+                                    fontSize: 9,
                                     fontWeight: FontWeight.w800,
                                     color: const Color(0xFF146EB4),
                                     decoration: TextDecoration.underline,
@@ -914,7 +914,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                           children: [
                             Text(
                               'Product description',
-                              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                             ),
                             _isGeneratingDescription
                                 ? const SizedBox(
@@ -927,7 +927,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                     child: Text(
                                       'Generate description',
                                       style: GoogleFonts.outfit(
-                                        fontSize: 11,
+                                        fontSize: 10,
                                         fontWeight: FontWeight.w800,
                                         color: const Color(0xFF146EB4),
                                         decoration: TextDecoration.underline,
@@ -962,7 +962,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                   children: [
                                     Text(
                                       'Paragraph',
-                                      style: GoogleFonts.outfit(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.foreground),
+                                      style: GoogleFonts.outfit(fontSize: 9, fontWeight: FontWeight.bold, color: AppColors.foreground),
                                     ),
                                     const SizedBox(width: 4),
                                     const Icon(LucideIcons.chevronDown, size: 10, color: AppColors.muted),
@@ -980,14 +980,14 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                 child: const Center(
                                   child: Text(
                                     'B',
-                                    style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF146EB4), fontSize: 11),
+                                    style: TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF146EB4), fontSize: 10),
                                   ),
                                 ),
                               ),
                               const SizedBox(width: 6),
                               const Text(
                                 'I',
-                                style: TextStyle(fontStyle: FontStyle.italic, fontWeight: FontWeight.bold, color: AppColors.muted, fontSize: 11),
+                                style: TextStyle(fontStyle: FontStyle.italic, fontWeight: FontWeight.bold, color: AppColors.muted, fontSize: 10),
                               ),
                               const SizedBox(width: 10),
                               const Icon(LucideIcons.penTool, size: 12, color: AppColors.muted),
@@ -1016,7 +1016,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               borderSide: BorderSide(color: AppColors.forestGreen, width: 1.5),
                             ),
                           ),
-                          style: GoogleFonts.outfit(fontSize: 12, color: AppColors.foreground, height: 1.3),
+                          style: GoogleFonts.outfit(fontSize: 11, color: AppColors.foreground, height: 1.3),
                         ),
                       ],
                     ),
@@ -1097,7 +1097,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                 icon: const Icon(LucideIcons.camera, size: 16, color: AppColors.forestGreen),
                                 label: Text(
                                   'Upload Photo',
-                                  style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.foreground),
+                                  style: GoogleFonts.outfit(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.foreground),
                                 ),
                               ),
                             ),
@@ -1107,14 +1107,14 @@ class _EditProductScreenState extends State<EditProductScreen> {
 
                         Text(
                           'Promotional Video URL',
-                          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                         ),
                         const SizedBox(height: 6),
                         TextFormField(
                           controller: _videoUrlController,
                           decoration: InputDecoration(
                             hintText: 'https://youtube.com/watch?v=...',
-                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 11),
+                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 10),
                             contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
@@ -1129,7 +1129,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               borderSide: const BorderSide(color: AppColors.forestGreen, width: 1.5),
                             ),
                           ),
-                          style: GoogleFonts.outfit(fontSize: 13, color: AppColors.foreground),
+                          style: GoogleFonts.outfit(fontSize: 12, color: AppColors.foreground),
                         ),
                       ],
                     ),
@@ -1147,14 +1147,14 @@ class _EditProductScreenState extends State<EditProductScreen> {
                       children: [
                         Text(
                           'Stock Quantity',
-                          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                         ),
                         const SizedBox(height: 6),
                         TextFormField(
                           controller: _inventoryQtyController,
                           decoration: InputDecoration(
                             hintText: 'Unlimited or number',
-                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 11),
+                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 10),
                             contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
@@ -1169,20 +1169,20 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               borderSide: const BorderSide(color: AppColors.forestGreen, width: 1.5),
                             ),
                           ),
-                          style: GoogleFonts.outfit(fontSize: 13, fontWeight: FontWeight.bold, color: AppColors.foreground),
+                          style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.foreground),
                         ),
                         const SizedBox(height: 14),
 
                         Text(
                           'SKU ID',
-                          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                         ),
                         const SizedBox(height: 6),
                         TextFormField(
                           controller: _skuController,
                           decoration: InputDecoration(
                             hintText: 'e.g. BAN-TS-50',
-                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 11),
+                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 10),
                             contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
@@ -1197,7 +1197,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               borderSide: const BorderSide(color: AppColors.forestGreen, width: 1.5),
                             ),
                           ),
-                          style: GoogleFonts.outfit(fontSize: 13, fontWeight: FontWeight.w600, color: AppColors.foreground),
+                          style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.w600, color: AppColors.foreground),
                         ),
                       ],
                     ),
@@ -1215,7 +1215,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                       children: [
                         Text(
                           'Shipment Weight',
-                          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                         ),
                         const SizedBox(height: 6),
                         Row(
@@ -1227,7 +1227,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                 keyboardType: TextInputType.number,
                                 decoration: InputDecoration(
                                   hintText: 'e.g. 1.2',
-                                  hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 11),
+                                  hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 10),
                                   contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                                   border: OutlineInputBorder(
                                     borderRadius: BorderRadius.circular(8),
@@ -1242,7 +1242,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                     borderSide: const BorderSide(color: AppColors.forestGreen, width: 1.5),
                                   ),
                                 ),
-                                style: GoogleFonts.outfit(fontSize: 13, color: AppColors.foreground),
+                                style: GoogleFonts.outfit(fontSize: 12, color: AppColors.foreground),
                               ),
                             ),
                             const SizedBox(width: 8),
@@ -1257,7 +1257,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                   child: DropdownButton<String>(
                                     value: _weightUnit,
                                     isExpanded: true,
-                                    style: GoogleFonts.outfit(fontSize: 13, fontWeight: FontWeight.bold, color: AppColors.foreground),
+                                    style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.foreground),
                                     onChanged: (String? newVal) {
                                       if (newVal != null) {
                                         setState(() {
@@ -1287,14 +1287,14 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                 children: [
                                   Text(
                                     'HSN Code',
-                                    style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                                    style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                                   ),
                                   const SizedBox(height: 6),
                                   TextFormField(
                                     controller: _hsnCodeController,
                                     decoration: InputDecoration(
                                       hintText: 'Enter code',
-                                      hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 11),
+                                      hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 10),
                                       contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                                       border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(8),
@@ -1309,7 +1309,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                         borderSide: const BorderSide(color: AppColors.forestGreen, width: 1.5),
                                       ),
                                     ),
-                                    style: GoogleFonts.outfit(fontSize: 13, color: AppColors.foreground),
+                                    style: GoogleFonts.outfit(fontSize: 12, color: AppColors.foreground),
                                   ),
                                 ],
                               ),
@@ -1321,7 +1321,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                 children: [
                                   Text(
                                     'GST Percentage',
-                                    style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                                    style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                                   ),
                                   const SizedBox(height: 6),
                                   TextFormField(
@@ -1329,9 +1329,9 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                     keyboardType: TextInputType.number,
                                     decoration: InputDecoration(
                                       hintText: 'e.g. 18',
-                                      hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 11),
+                                      hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 10),
                                       suffixText: '%',
-                                      suffixStyle: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 13, color: AppColors.foreground),
+                                      suffixStyle: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
                                       contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                                       border: OutlineInputBorder(
                                         borderRadius: BorderRadius.circular(8),
@@ -1346,7 +1346,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                         borderSide: const BorderSide(color: AppColors.forestGreen, width: 1.5),
                                       ),
                                     ),
-                                    style: GoogleFonts.outfit(fontSize: 13, fontWeight: FontWeight.bold, color: AppColors.foreground),
+                                    style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.foreground),
                                   ),
                                 ],
                               ),
@@ -1370,7 +1370,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                         if (_variantsList.isNotEmpty) ...[
                           Text(
                             'Defined Variants',
-                            style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 10, color: AppColors.muted),
+                            style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 9, color: AppColors.muted),
                           ),
                           const SizedBox(height: 6),
                           ListView.separated(
@@ -1392,7 +1392,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                     Expanded(
                                       child: Text(
                                         '${v['name']}  |  Price Differential: ₹${v['price']}',
-                                        style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.foreground),
+                                        style: GoogleFonts.outfit(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.foreground),
                                       ),
                                     ),
                                     GestureDetector(
@@ -1425,7 +1425,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               children: [
                                 Text(
                                   'Configure New Option',
-                                  style: GoogleFonts.outfit(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.foreground),
+                                  style: GoogleFonts.outfit(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.foreground),
                                 ),
                                 const SizedBox(height: 8),
                                 Row(
@@ -1435,13 +1435,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                         controller: _newVariantNameController,
                                         decoration: InputDecoration(
                                           hintText: 'Title (e.g. 440ml)',
-                                          hintStyle: GoogleFonts.outfit(fontSize: 10, color: AppColors.muted),
+                                          hintStyle: GoogleFonts.outfit(fontSize: 9, color: AppColors.muted),
                                           fillColor: Colors.white,
                                           filled: true,
                                           contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                                           border: OutlineInputBorder(borderRadius: BorderRadius.circular(6)),
                                         ),
-                                        style: GoogleFonts.outfit(fontSize: 12),
+                                        style: GoogleFonts.outfit(fontSize: 11),
                                       ),
                                     ),
                                     const SizedBox(width: 8),
@@ -1451,13 +1451,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                         keyboardType: TextInputType.number,
                                         decoration: InputDecoration(
                                           hintText: 'Price differential (₹)',
-                                          hintStyle: GoogleFonts.outfit(fontSize: 10, color: AppColors.muted),
+                                          hintStyle: GoogleFonts.outfit(fontSize: 9, color: AppColors.muted),
                                           fillColor: Colors.white,
                                           filled: true,
                                           contentPadding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
                                           border: OutlineInputBorder(borderRadius: BorderRadius.circular(6)),
                                         ),
-                                        style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.bold),
+                                        style: GoogleFonts.outfit(fontSize: 11, fontWeight: FontWeight.bold),
                                       ),
                                     ),
                                   ],
@@ -1489,12 +1489,12 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                         padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
                                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                                       ),
-                                      child: Text('Save Option', style: GoogleFonts.outfit(fontSize: 11, fontWeight: FontWeight.bold)),
+                                      child: Text('Save Option', style: GoogleFonts.outfit(fontSize: 10, fontWeight: FontWeight.bold)),
                                     ),
                                     const SizedBox(width: 8),
                                     TextButton(
                                       onPressed: () => setState(() => _showAddVariantRow = false),
-                                      child: Text('Cancel', style: GoogleFonts.outfit(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.muted)),
+                                      child: Text('Cancel', style: GoogleFonts.outfit(fontSize: 10, fontWeight: FontWeight.bold, color: AppColors.muted)),
                                     ),
                                   ],
                                 ),
@@ -1511,7 +1511,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                             icon: const Icon(LucideIcons.plus, size: 14, color: AppColors.foreground),
                             label: Text(
                               'Add variants',
-                              style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.foreground),
+                              style: GoogleFonts.outfit(fontSize: 11, fontWeight: FontWeight.bold, color: AppColors.foreground),
                             ),
                           ),
                         ],
@@ -1534,14 +1534,14 @@ class _EditProductScreenState extends State<EditProductScreen> {
                           children: [
                             Text(
                               'Title Tag',
-                              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                             ),
                             GestureDetector(
                               onTap: _generateAIDukaanSEOTags,
                               child: Text(
                                 'Generate SEO Tags',
                                 style: GoogleFonts.outfit(
-                                  fontSize: 11,
+                                  fontSize: 10,
                                   fontWeight: FontWeight.w800,
                                   color: const Color(0xFF146EB4),
                                   decoration: TextDecoration.underline,
@@ -1555,7 +1555,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                           controller: _seoTitleController,
                           decoration: InputDecoration(
                             hintText: 'SEO Page Title',
-                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 11),
+                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 10),
                             contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
@@ -1570,13 +1570,13 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               borderSide: const BorderSide(color: AppColors.forestGreen, width: 1.5),
                             ),
                           ),
-                          style: GoogleFonts.outfit(fontSize: 13, color: AppColors.foreground),
+                          style: GoogleFonts.outfit(fontSize: 12, color: AppColors.foreground),
                         ),
                         const SizedBox(height: 14),
 
                         Text(
                           'Meta Description Tag',
-                          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                          style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                         ),
                         const SizedBox(height: 6),
                         TextFormField(
@@ -1584,7 +1584,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                           maxLines: 3,
                           decoration: InputDecoration(
                             hintText: 'Page search preview description...',
-                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 11),
+                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 10),
                             contentPadding: const EdgeInsets.all(10),
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(8),
@@ -1599,7 +1599,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                               borderSide: const BorderSide(color: AppColors.forestGreen, width: 1.5),
                             ),
                           ),
-                          style: GoogleFonts.outfit(fontSize: 12, color: AppColors.foreground, height: 1.3),
+                          style: GoogleFonts.outfit(fontSize: 11, color: AppColors.foreground, height: 1.3),
                         ),
                       ],
                     ),
@@ -1620,7 +1620,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                           children: [
                             Text(
                               'Countdown Timer Enabled',
-                              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                             ),
                             SizedBox(
                               height: 24,
@@ -1655,7 +1655,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                   children: [
                                     Text(
                                       'End Date',
-                                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                                     ),
                                     const SizedBox(height: 6),
                                     GestureDetector(
@@ -1665,12 +1665,12 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                           controller: _timerEndDateController,
                                           decoration: InputDecoration(
                                             hintText: 'YYYY-MM-DD',
-                                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 11),
+                                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 10),
                                             suffixIcon: const Icon(LucideIcons.calendar, size: 16, color: AppColors.muted),
                                             contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
                                           ),
-                                          style: GoogleFonts.outfit(fontSize: 13, fontWeight: FontWeight.bold, color: AppColors.foreground),
+                                          style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.foreground),
                                         ),
                                       ),
                                     ),
@@ -1684,7 +1684,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                   children: [
                                     Text(
                                       'End Time',
-                                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12, color: AppColors.foreground),
+                                      style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11, color: AppColors.foreground),
                                     ),
                                     const SizedBox(height: 6),
                                     GestureDetector(
@@ -1694,12 +1694,12 @@ class _EditProductScreenState extends State<EditProductScreen> {
                                           controller: _timerEndTimeController,
                                           decoration: InputDecoration(
                                             hintText: 'HH:MM',
-                                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 11),
+                                            hintStyle: GoogleFonts.outfit(color: AppColors.muted, fontSize: 10),
                                             suffixIcon: const Icon(LucideIcons.clock, size: 16, color: AppColors.muted),
                                             contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 10),
                                             border: OutlineInputBorder(borderRadius: BorderRadius.circular(8)),
                                           ),
-                                          style: GoogleFonts.outfit(fontSize: 13, fontWeight: FontWeight.bold, color: AppColors.foreground),
+                                          style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.bold, color: AppColors.foreground),
                                         ),
                                       ),
                                     ),
@@ -1751,7 +1751,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 ),
                 child: Text(
                   'Delete',
-                  style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 13),
+                  style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12),
                 ),
               ),
             ),
@@ -1769,7 +1769,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                 ),
                 child: Text(
                   'Update',
-                  style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 13),
+                  style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 12),
                 ),
               ),
             ),
@@ -1791,7 +1791,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
           children: [
             Text(
               'Select Product Category',
-              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 14),
+              style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 13),
             ),
             const SizedBox(height: 10),
             Expanded(
@@ -1805,7 +1805,7 @@ class _EditProductScreenState extends State<EditProductScreen> {
                   'Graffiti Series Sprays',
                   'Other'
                 ].map((c) => ListTile(
-                  title: Text(c, style: GoogleFonts.outfit(fontSize: 13, fontWeight: FontWeight.w600)),
+                  title: Text(c, style: GoogleFonts.outfit(fontSize: 12, fontWeight: FontWeight.w600)),
                   onTap: () {
                     setState(() {
                       if (_selectedCategories.contains(c)) {
