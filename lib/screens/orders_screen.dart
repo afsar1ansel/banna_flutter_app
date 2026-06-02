@@ -405,7 +405,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                             return RadioListTile<String>(
                               value: range,
                               groupValue: _filterDateRange,
-                              activeColor: const Color(0xFF146EB4),
+                              activeColor: const Color(0xFF3FAE5A),
                               contentPadding: EdgeInsets.zero,
                               dense: true,
                               title: Text(range, style: GoogleFonts.outfit(fontSize: 10, color: AppColors.foreground)),
@@ -426,7 +426,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
 
                           CheckboxListTile(
                             value: _filterPaid,
-                            activeColor: const Color(0xFF146EB4),
+                            activeColor: const Color(0xFF3FAE5A),
                             contentPadding: EdgeInsets.zero,
                             dense: true,
                             controlAffinity: ListTileControlAffinity.leading,
@@ -438,7 +438,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                           ),
                           CheckboxListTile(
                             value: _filterCod,
-                            activeColor: const Color(0xFF146EB4),
+                            activeColor: const Color(0xFF3FAE5A),
                             contentPadding: EdgeInsets.zero,
                             dense: true,
                             controlAffinity: ListTileControlAffinity.leading,
@@ -450,7 +450,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                           ),
                           CheckboxListTile(
                             value: _filterUnpaid,
-                            activeColor: const Color(0xFF146EB4),
+                            activeColor: const Color(0xFF3FAE5A),
                             contentPadding: EdgeInsets.zero,
                             dense: true,
                             controlAffinity: ListTileControlAffinity.leading,
@@ -462,7 +462,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                           ),
                           CheckboxListTile(
                             value: _filterPrepaid,
-                            activeColor: const Color(0xFF146EB4),
+                            activeColor: const Color(0xFF3FAE5A),
                             contentPadding: EdgeInsets.zero,
                             dense: true,
                             controlAffinity: ListTileControlAffinity.leading,
@@ -515,7 +515,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
                         Expanded(
                           child: ElevatedButton(
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: const Color(0xFF146EB4),
+                              backgroundColor: const Color(0xFF1F3A2E),
                               foregroundColor: Colors.white,
                               elevation: 0,
                               padding: const EdgeInsets.symmetric(vertical: 12),
@@ -588,7 +588,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
     }
 
     return AppBar(
-      backgroundColor: const Color(0xFF146EB4),
+      backgroundColor: const Color(0xFF1F3A2E),
       elevation: 0,
       title: Text(
         'Orders',
@@ -644,7 +644,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
           // ==================== TABS HEADER ====================
           if (!_isSearching) ...[
             Container(
-              color: const Color(0xFF146EB4),
+              color: const Color(0xFF1F3A2E),
               child: Row(
                 children: [
                   Expanded(
@@ -742,7 +742,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
             child: _isLoading
                 ? const Center(
                     child: CircularProgressIndicator(
-                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF146EB4)),
+                      valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF3FAE5A)),
                     ),
                   )
                 : filteredOrders.isEmpty
@@ -918,7 +918,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
           color: isSelected ? const Color(0xFFEBF3FC) : Colors.white,
           borderRadius: BorderRadius.circular(20),
           border: Border.all(
-            color: isSelected ? const Color(0xFF146EB4) : AppColors.border,
+            color: isSelected ? const Color(0xFF3FAE5A) : AppColors.border,
             width: 1,
           ),
         ),
@@ -928,7 +928,7 @@ class _OrdersScreenState extends State<OrdersScreen> {
             style: GoogleFonts.outfit(
               fontWeight: FontWeight.bold,
               fontSize: 8,
-              color: isSelected ? const Color(0xFF146EB4) : AppColors.muted,
+              color: isSelected ? const Color(0xFF3FAE5A) : AppColors.muted,
             ),
           ),
         ),

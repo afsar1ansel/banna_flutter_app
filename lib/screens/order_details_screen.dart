@@ -206,7 +206,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
       body: _isLoading
           ? const Center(
               child: CircularProgressIndicator(
-                valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF146EB4)),
+                valueColor: AlwaysStoppedAnimation<Color>(Color(0xFF3FAE5A)),
               ),
             )
           : SingleChildScrollView(
@@ -280,16 +280,16 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                         ),
                         OutlinedButton.icon(
                           style: OutlinedButton.styleFrom(
-                            side: const BorderSide(color: Color(0xFF146EB4)),
+                            side: const BorderSide(color: Color(0xFF3FAE5A)),
                             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
                             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(6)),
                           ),
                           onPressed: () => _showToast('Downloading Receipt...'),
-                          icon: const Icon(LucideIcons.fileText, size: 12, color: Color(0xFF146EB4)),
+                          icon: const Icon(LucideIcons.fileText, size: 12, color: Color(0xFF3FAE5A)),
                           label: Text(
                             'Receipt',
                             style: GoogleFonts.outfit(
-                              color: const Color(0xFF146EB4),
+                              color: const Color(0xFF3FAE5A),
                               fontWeight: FontWeight.bold,
                               fontSize: 8,
                             ),
@@ -464,7 +464,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                       style: GoogleFonts.outfit(
                                         fontWeight: FontWeight.bold,
                                         fontSize: 9,
-                                        color: const Color(0xFF146EB4),
+                                        color: const Color(0xFF3FAE5A),
                                       ),
                                     ),
                                   ),
@@ -505,7 +505,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                 style: GoogleFonts.outfit(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 9,
-                                  color: const Color(0xFF146EB4),
+                                  color: const Color(0xFF3FAE5A),
                                 ),
                               ),
                             ),
@@ -569,7 +569,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                 style: GoogleFonts.outfit(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 8,
-                                  color: const Color(0xFF146EB4),
+                                  color: const Color(0xFF3FAE5A),
                                   decoration: TextDecoration.underline,
                                 ),
                               ),
@@ -611,7 +611,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                                 style: GoogleFonts.outfit(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 8,
-                                  color: const Color(0xFF146EB4),
+                                  color: const Color(0xFF3FAE5A),
                                 ),
                               ),
                             ),
@@ -861,7 +861,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                  color: isActive ? const Color(0xFF146EB4) : AppColors.muted,
+                  color: isActive ? const Color(0xFF3FAE5A) : AppColors.muted,
                   width: 1.5,
                 ),
                 color: Colors.white,
@@ -872,7 +872,7 @@ class _OrderDetailScreenState extends State<OrderDetailScreen> {
                   height: 4,
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
-                    color: isActive ? const Color(0xFF146EB4) : Colors.transparent,
+                    color: isActive ? const Color(0xFF3FAE5A) : Colors.transparent,
                   ),
                 ),
               ),
