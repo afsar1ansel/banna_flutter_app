@@ -26,6 +26,14 @@ class BannaDashboardApp extends StatelessWidget {
     return MaterialApp(
       title: 'Banna Command',
       debugShowCheckedModeBanner: false,
+      builder: (context, child) {
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(
+            textScaleFactor: 1.4, // Globally scale all fonts up by 40%
+          ),
+          child: child!,
+        );
+      },
       theme: ThemeData(
         useMaterial3: true,
         primaryColor: AppColors.primary,
