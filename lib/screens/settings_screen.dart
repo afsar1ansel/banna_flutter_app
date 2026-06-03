@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 import '../core/constants.dart';
+import 'store_management_screen.dart';
+import 'additional_info_screen.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -425,75 +427,24 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  // Interactive Sign out dialog
-  void _showSignOutDialog(BuildContext context) {
-    showDialog(
-      context: context,
-      builder: (context) {
-        return AlertDialog(
-          backgroundColor: Colors.white,
-          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
-          title: Text(
-            'Confirm Sign Out',
-            style: GoogleFonts.outfit(
-              fontWeight: FontWeight.bold,
-              fontSize: 14,
-              color: AppColors.forestGreen,
-            ),
-          ),
-          content: Text(
-            'Are you sure you want to log out from Banna Dashboard?',
-            style: GoogleFonts.outfit(fontSize: 11, color: AppColors.muted),
-          ),
-          actions: [
-            TextButton(
-              onPressed: () => Navigator.pop(context),
-              child: Text(
-                'Cancel',
-                style: GoogleFonts.outfit(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 11,
-                  color: AppColors.muted,
-                ),
-              ),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pop(context);
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    backgroundColor: AppColors.errorRed,
-                    behavior: SnackBarBehavior.floating,
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
-                    content: Text(
-                      'Signed out successfully (demo)!',
-                      style: GoogleFonts.outfit(fontWeight: FontWeight.w600, fontSize: 11),
-                    ),
-                  ),
-                );
-              },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: AppColors.errorRed,
-                foregroundColor: Colors.white,
-                elevation: 0,
-                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
-              ),
-              child: Text(
-                'Sign Out',
-                style: GoogleFonts.outfit(fontWeight: FontWeight.bold, fontSize: 11),
-              ),
-            ),
-          ],
-        );
-      },
-    );
-  }
-
   // Settings click dispatcher
   void _onSettingItemClicked(String title) {
     switch (title) {
+      case 'Store management':
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const StoreManagementScreen(),
+          ),
+        );
+        break;
       case 'Additional information':
-        _showSignOutDialog(context);
+        Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const AdditionalInfoScreen(),
+          ),
+        );
         break;
       default:
         ScaffoldMessenger.of(context).showSnackBar(
